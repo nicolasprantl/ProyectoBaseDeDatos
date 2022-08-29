@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres
+    restart: always
+    ports:
+      - '5432:5432'
+    environment:
+      - DATABASE_HOST=127.0.0.1
+      - DATABASE_USER=admin
+      - POSTGRES_DB=UCU_DB
+      - POSTGRES_PASSWORD=admin123
+      - POSTGRES_USER=admin
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "admin@admin.com"
+      PGADMIN_DEFAULT_PASSWORD: "admin"
+    ports:
+      - '80:80'
+    depends_on:
+      - postgres
