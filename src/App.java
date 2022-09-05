@@ -1,3 +1,5 @@
+
+
 import java.util.Scanner;
 
 @SuppressWarnings("all")
@@ -21,10 +23,10 @@ public class App {
             option = in.nextInt();
             switch (option) {
                 case 1:
-                    connection.CreateTable();
+                    connection.createTable();
                     break;
                 case 2:
-                    connection.Select();
+                    connection.selectAll();
                     break;
                 case 3:
                     connection.updateRow();

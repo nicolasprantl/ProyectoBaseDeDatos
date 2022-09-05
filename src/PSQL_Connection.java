@@ -43,7 +43,7 @@ public class PSQL_Connection {
         }
     }
 
-    public void Select() {
+    public void selectAll() {
         Statement stmt = null;
 
         String tableName = null;
@@ -79,7 +79,7 @@ public class PSQL_Connection {
         }
     }
 
-    public void CreateTable() {
+    public void createTable() {
 
         Statement stmt = null;
 
